@@ -14,18 +14,7 @@ commands:
   - id: install-vscode-extensions
     exec:
       component: tools
-      commandLine: |
-        for i in $(seq 1 30); do
-          CODE=$(ls /checode/checode-linux-libc/*/bin/remote-cli/code-oss 2>/dev/null | head -1)
-          if [ -n "$CODE" ]; then
-            "$CODE" --install-extension redhat.java
-            "$CODE" --install-extension vscjava.vscode-java-dependency
-            "$CODE" --install-extension vscjava.vscode-java-debug
-            "$CODE" --install-extension EditorConfig.EditorConfig
-            break
-          fi
-          sleep 5
-        done
+      commandLine: nohup bash "$PROJECT_SOURCE/.che/install-extensions.sh" > /tmp/install-extensions.log 2>&1 &
   - id: configure-vscode
     exec:
       component: tools
