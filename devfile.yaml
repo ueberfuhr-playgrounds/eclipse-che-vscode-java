@@ -28,10 +28,7 @@ commands:
   - id: configure-git
     exec:
       component: tools
-      commandLine: |
-        USERNAME="${DEVWORKSPACE_NAMESPACE%-che}"
-        git config --global user.name  >/dev/null || git config --global user.name  "$USERNAME"
-        git config --global user.email >/dev/null || git config --global user.email "$USERNAME@schulung.local"
+      commandLine: bash "$PROJECT_SOURCE/.che/init-git.sh"
 events:
   postStart:
     - install-java-extensions
