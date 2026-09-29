@@ -1,10 +1,8 @@
 {
-  // Java Language Server
   "java.jdt.ls.vmargs": "-Xmx768m -XX:+UseSerialGC",
   "java.server.launchMode": "Standard",
   "java.import.gradle.enabled": false,
 
-  // Formatierung (spiegelt .editorconfig)
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
@@ -15,12 +13,10 @@
   "files.trimTrailingWhitespace": true,
   "[markdown]": { "files.trimTrailingWhitespace": false },
 
-  // Beim Speichern formatieren und Imports aufräumen
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": { "source.organizeImports": "explicit" },
 
-  // Aufgeräumte Oberfläche für Einsteiger
   "editor.minimap.enabled": false,
   "workbench.tips.enabled": false,
   "files.exclude": {
