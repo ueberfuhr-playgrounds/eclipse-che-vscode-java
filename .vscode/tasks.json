@@ -8,6 +8,13 @@
       "group": { "kind": "build", "isDefault": true },
       "presentation": { "reveal": "always", "clear": true },
       "problemMatcher": []
-    }
+    },
+    {
+      "label": "Kursupdate holen",
+      "type": "shell",
+      "command": "bash ${workspaceFolder}/.che/update-preferences.sh",
+      "presentation": { "reveal": "always", "clear": true, "focus": true },
+      "problemMatcher": []
+    }    
   ]
 }
