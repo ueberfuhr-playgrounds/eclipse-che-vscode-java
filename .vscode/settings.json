@@ -1,0 +1,6 @@
+{
+  "java.jdt.ls.vmargs": "-Xmx768m -XX:+UseSerialGC",
+  "java.server.launchMode": "Standard",
+  "java.import.gradle.enabled": false,
+  "java.project.sourcePaths": ["src"]
+}
