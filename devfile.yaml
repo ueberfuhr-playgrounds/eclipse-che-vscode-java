@@ -11,10 +11,11 @@ components:
       cpuLimit: "1"
       mountSources: true
 commands:
-  - id: install-vscode-extensions
-    exec:
-      component: tools
-      commandLine: nohup bash "$PROJECT_SOURCE/.che/install-extensions.sh" > /tmp/install-extensions.log 2>&1 &
+#  DO NOT INSTALL EXTENSIONS BEFORE VSCODE SHOWS UP, BUT INSTALL THEM AUTOMATICALLY AFTER STARTUP
+#  - id: install-vscode-extensions
+#    exec:
+#      component: tools
+#      commandLine: nohup bash "$PROJECT_SOURCE/.che/install-extensions.sh" > /tmp/install-extensions.log 2>&1 &
   - id: configure-vscode
     exec:
       component: tools
