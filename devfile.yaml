@@ -20,6 +20,7 @@ commands:
           if [ -n "$CODE" ]; then
             "$CODE" --install-extension redhat.java
             "$CODE" --install-extension vscjava.vscode-java-dependency
+            "$CODE" --install-extension vscjava.vscode-java-debug
             break
           fi
           sleep 5
