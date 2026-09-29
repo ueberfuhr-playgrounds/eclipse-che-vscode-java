@@ -10,3 +10,16 @@ components:
       cpuRequest: 250m
       cpuLimit: "1"
       mountSources: true
+commands:
+  - id: install-java-extension
+    exec:
+      component: tools
+      commandLine: |
+        for i in $(seq 1 30); do
+          CODE=$(ls /checode/checode-linux-libc/*/bin/remote-cli/code-oss 2>/dev/null | head -1)
+          [ -n "$CODE" ] && "$CODE" --install-extension redhat.java && break
+          sleep 5
+        done
+events:
+  postStart:
+    - install-java-extension
