@@ -26,6 +26,10 @@ commands:
           fi
           sleep 5
         done
+  - id: configure-vscode
+    exec:
+      component: tools
+      commandLine: bash "$PROJECT_SOURCE/.che/init-vscode-settings.sh"
   - id: configure-git
     exec:
       component: tools
@@ -33,4 +37,5 @@ commands:
 events:
   postStart:
     - install-java-extensions
+    - configure-vscode
     - configure-git
