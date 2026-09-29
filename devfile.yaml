@@ -21,6 +21,7 @@ commands:
             "$CODE" --install-extension redhat.java
             "$CODE" --install-extension vscjava.vscode-java-dependency
             "$CODE" --install-extension vscjava.vscode-java-debug
+            "$CODE" --install-extension EditorConfig.EditorConfig
             break
           fi
           sleep 5
