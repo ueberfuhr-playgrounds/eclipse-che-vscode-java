@@ -11,7 +11,7 @@ components:
       cpuLimit: "1"
       mountSources: true
 commands:
-  - id: install-java-extensions
+  - id: install-vscode-extensions
     exec:
       component: tools
       commandLine: |
@@ -36,6 +36,6 @@ commands:
       commandLine: bash "$PROJECT_SOURCE/.che/init-git.sh"
 events:
   postStart:
-    - install-java-extensions
+    - install-vscode-extensions
     - configure-vscode
     - configure-git
