@@ -3,7 +3,6 @@
   "java.jdt.ls.vmargs": "-Xmx768m -XX:+UseSerialGC",
   "java.server.launchMode": "Standard",
   "java.import.gradle.enabled": false,
-  "java.project.sourcePaths": ["src"],
 
   // Formatierung (spiegelt .editorconfig)
   "editor.tabSize": 2,
@@ -27,6 +26,8 @@
   "files.exclude": {
     "**/out": true,
     "**/bin": true,
-    "extensions": true
+    "extensions": true,
+    ".project": true,
+    ".classpath": true
   }
 }
