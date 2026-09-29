@@ -26,6 +26,6 @@ commands:
       commandLine: bash "$PROJECT_SOURCE/.che/init-git.sh"
 events:
   postStart:
-    - install-vscode-extensions
+#    - install-vscode-extensions
     - configure-vscode
     - configure-git
