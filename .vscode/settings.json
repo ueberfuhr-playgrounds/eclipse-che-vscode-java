@@ -24,6 +24,7 @@
     "**/bin": true,
     "extensions": true,
     ".project": true,
-    ".classpath": true
+    ".classpath": true,
+    "devfile.yaml": true
   }
 }
