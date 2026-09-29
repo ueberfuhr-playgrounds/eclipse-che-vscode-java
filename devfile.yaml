@@ -11,15 +11,19 @@ components:
       cpuLimit: "1"
       mountSources: true
 commands:
-  - id: install-java-extension
+  - id: install-java-extensions
     exec:
       component: tools
       commandLine: |
         for i in $(seq 1 30); do
           CODE=$(ls /checode/checode-linux-libc/*/bin/remote-cli/code-oss 2>/dev/null | head -1)
-          [ -n "$CODE" ] && "$CODE" --install-extension redhat.java && break
+          if [ -n "$CODE" ]; then
+            "$CODE" --install-extension redhat.java
+            "$CODE" --install-extension vscjava.vscode-java-dependency
+            break
+          fi
           sleep 5
         done
 events:
   postStart:
-    - install-java-extension
+    - install-java-extensions
