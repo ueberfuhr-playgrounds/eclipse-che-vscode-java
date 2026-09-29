@@ -1,0 +1,7 @@
+{
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "security.workspace.trust.enabled": false,
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true
+}
